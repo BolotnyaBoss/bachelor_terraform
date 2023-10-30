@@ -36,18 +36,7 @@ module "sql-server" {
 }
 
 
-module "sql-database" {
-  source                              = "./modules/sql-database"
 
-  server_id                           = module.sql-server.id
-  database_name                       = var.database_name
-  storage_account_name                = var.storage_account_name
-  storage_container_name              = var.storage_container_name
-  blob_filename                       = var.bacpac_file_name
-  storage_account_primary_key         = module.storage-account.primary_key
-  server_administrator_login          = var.server_administrator_login
-  server_administrator_login_password = var.server_administrator_login_password
-}
 
 module "data-factory" {
   source = "./modules/data-factory"
