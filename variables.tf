@@ -1,64 +1,29533 @@
+variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
 variable "resource_group_name" {
-    type        = string
-    description = "The name of resource group in which to create storage account"
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
 }
 
 variable "location" {
-    type        = string
-    description = "The location where create storage account"
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
 }
 
-variable "storage_account_name" {
-    type        = string
-    description = "The name of storage account"
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}vvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
 }
 
-variable "storage_container_name" {
-    type        = string
-    description = "The name of storage container"
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
 }
 
-variable "bacpac_file_name" {
-    type        = string
-    description = "The file name of bacpac for database"
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
 }
 
-variable "bacpac_path" {
-    type        = string
-    description = "The path where located bacpac file for database"
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
 }
 
-variable "server_name" {
-    type        = string
-    description = "The name of server"
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
 }
 
-variable "database_name" {
-    type        = string
-    description = "The name of the database which need to create"
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
 }
 
-variable "server_administrator_login" {
-    type        = string
-    description = "The administrator login of server"
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}rvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
 }
 
-variable "server_administrator_login_password" {
-    type        = string
-    description = "The administrator login password of server"
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
 }
 
-variable "aad_login_username" {
-    type        = string
-    description = "The name login username of AAD administrator"
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
 }
 
-variable "data_factory_name" {
-    type        = string
-    description = "The name of data factory instance"
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ivariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
 }
 
-variable "linked_service_name" {
-    type        = string
-    description = "The name of linked service in adf instance"
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}bvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}lvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}"variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}rvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}svariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ovariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}uvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}rvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}cvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}_variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}gvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}rvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ovariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}uvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}pvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}_variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}nvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}mvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}"variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}{variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}
+variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}yvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}pvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}=variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}svariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}rvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ivariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}nvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}gvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}
+variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}dvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}svariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}cvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}rvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ivariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}pvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ivariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ovariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}nvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}=variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}"variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}Tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}hvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}nvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}mvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ovariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}fvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}rvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}svariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ovariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}uvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}rvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}cvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}gvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}rvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ovariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}uvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}pvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ivariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}nvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}wvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}hvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ivariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}cvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}hvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ovariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}cvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}rvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}svariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ovariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}rvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}gvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}cvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}cvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ovariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}uvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}nvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}"variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}
+variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}}variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}
+variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}
+variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}vvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}rvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ivariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}bvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}lvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}"variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}lvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ovariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}cvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ivariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ovariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}nvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}"variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}{variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}
+variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}yvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}pvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}=variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}svariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}rvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ivariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}nvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}gvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}
+variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}dvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}svariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}cvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}rvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ivariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}pvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ivariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ovariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}nvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}=variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}"variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}Tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}hvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}lvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ovariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}cvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ivariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ovariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}nvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}wvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}hvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}rvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}cvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}rvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}svariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ovariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}rvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}gvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}cvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}cvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ovariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}uvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}nvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}"variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}
+variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}}variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}
+variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}
+variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}vvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}rvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ivariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}bvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}lvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}"variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}svariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ovariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}rvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}gvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}_variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}cvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}cvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ovariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}uvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}nvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}_variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}nvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}mvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}"variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}{variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}
+variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}yvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}pvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}=variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}svariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}rvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ivariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}nvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}gvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}
+variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}dvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}svariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}cvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}rvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ivariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}pvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ivariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ovariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}nvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}=variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}"variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}Tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}hvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}nvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}mvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ovariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}fvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}svariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ovariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}rvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}gvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}cvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}cvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ovariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}uvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}nvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}"variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}
+variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}}variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}
+variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}
+variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}vvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}rvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ivariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}bvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}lvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}"variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}svariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ovariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}rvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}gvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}_variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}cvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ovariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}nvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ivariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}nvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}rvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}_variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}nvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}mvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}"variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}{variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}
+variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}yvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}pvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}=variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}svariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}rvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ivariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}nvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}gvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}
+variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}dvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}svariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}cvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}rvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ivariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}pvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ivariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ovariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}nvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}=variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}"variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}Tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}hvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}nvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}mvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ovariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}fvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}svariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ovariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}rvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}gvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}cvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ovariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}nvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ivariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}nvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}rvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}"variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}
+variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}}variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}
+variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}
+variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}vvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}rvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ivariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}bvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}lvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}"variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}bvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}cvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}pvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}cvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}_variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}fvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ivariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}lvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}_variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}nvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}mvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}"variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}{variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}
+variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}yvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}pvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}=variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}svariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}rvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ivariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}nvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}gvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}
+variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}dvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}svariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}cvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}rvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ivariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}pvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ivariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ovariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}nvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}=variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}"variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}Tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}hvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}fvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ivariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}lvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}nvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}mvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ovariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}fvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}bvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}cvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}pvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}cvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}fvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ovariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}rvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}dvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}bvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}svariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}"variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}
+variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}}variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}
+variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}
+variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}vvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}rvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ivariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}bvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}lvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}"variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}bvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}cvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}pvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}cvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}_variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}pvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}hvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}"variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}{variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}
+variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}yvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}pvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}=variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}svariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}rvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ivariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}nvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}gvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}
+variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}dvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}svariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}cvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}rvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ivariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}pvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ivariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ovariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}nvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}=variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}"variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}Tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}hvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}pvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}hvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}wvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}hvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}rvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}lvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ovariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}cvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}dvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}bvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}cvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}pvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}cvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}fvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ivariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}lvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}fvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ovariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}rvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}dvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}bvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}svariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}"variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}
+variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}}variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}
+variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}
+variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}vvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}rvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ivariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}bvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}lvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}"variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}svariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}rvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}vvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}rvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}_variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}nvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}mvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}"variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}{variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}
+variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}yvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}pvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}=variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}svariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}rvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ivariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}nvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}gvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}
+variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}dvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}svariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}cvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}rvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ivariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}pvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ivariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ovariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}nvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}=variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}"variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}Tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}hvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}nvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}mvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ovariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}fvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}svariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}rvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}vvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}rvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}"variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}
+variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}}variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}
+variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}
+variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}vvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}rvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ivariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}bvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}lvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}"variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}dvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}bvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}svariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}_variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}nvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}mvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}"variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}{variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}
+variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}yvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}pvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}=variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}svariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}rvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ivariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}nvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}gvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}
+variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}dvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}svariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}cvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}rvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ivariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}pvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ivariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ovariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}nvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}=variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}"variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}Tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}hvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}nvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}mvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ovariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}fvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}hvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}dvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}bvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}svariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}wvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}hvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ivariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}cvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}hvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}nvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}dvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ovariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}cvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}rvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}"variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}
+variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}}variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}
+variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}
+variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}vvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}rvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ivariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}bvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}lvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}"variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}svariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}rvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}vvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}rvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}_variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}dvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}mvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ivariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}nvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ivariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}svariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}rvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ovariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}rvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}_variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}lvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ovariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}gvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ivariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}nvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}"variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}{variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}
+variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}yvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}pvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}=variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}svariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}rvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ivariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}nvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}gvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}
+variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}dvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}svariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}cvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}rvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ivariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}pvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ivariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ovariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}nvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}=variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}"variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}Tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}hvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}dvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}mvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ivariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}nvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ivariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}svariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}rvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ovariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}rvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}lvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ovariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}gvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ivariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}nvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ovariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}fvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}svariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}rvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}vvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}rvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}"variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}
+variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}}variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}
+variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}
+variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}vvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}rvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ivariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}bvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}lvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}"variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}svariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}rvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}vvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}rvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}_variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}dvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}mvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ivariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}nvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ivariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}svariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}rvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ovariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}rvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}_variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}lvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ovariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}gvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ivariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}nvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}_variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}pvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}svariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}svariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}wvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ovariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}rvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}dvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}"variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}{variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}
+variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}yvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}pvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}=variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}svariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}rvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ivariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}nvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}gvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}
+variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}dvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}svariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}cvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}rvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ivariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}pvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ivariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ovariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}nvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}=variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}"variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}Tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}hvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}dvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}mvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ivariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}nvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ivariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}svariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}rvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ovariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}rvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}lvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ovariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}gvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ivariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}nvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}pvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}svariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}svariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}wvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ovariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}rvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}dvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ovariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}fvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}svariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}rvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}vvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}rvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}"variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}
+variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}}variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}
+variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}
+variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}vvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}rvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ivariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}bvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}lvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}"variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}dvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}_variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}lvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ovariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}gvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ivariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}nvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}_variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}uvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}svariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}rvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}nvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}mvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}"variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}{variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}
+variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}yvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}pvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}=variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}svariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}rvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ivariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}nvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}gvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}
+variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}dvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}svariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}cvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}rvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ivariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}pvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ivariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ovariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}nvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}=variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}"variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}Tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}hvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}nvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}mvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}lvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ovariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}gvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ivariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}nvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}uvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}svariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}rvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}nvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}mvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ovariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}fvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}Avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}Avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}Dvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}dvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}mvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ivariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}nvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ivariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}svariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}rvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ovariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}rvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}"variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}
+variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}}variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}
+variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}
+variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}vvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}rvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ivariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}bvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}lvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}"variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}dvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}_variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}fvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}cvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ovariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}rvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}yvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}_variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}nvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}mvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}"variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}{variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}
+variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}yvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}pvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}=variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}svariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}rvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ivariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}nvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}gvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}
+variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}dvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}svariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}cvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}rvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ivariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}pvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ivariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ovariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}nvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}=variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}"variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}Tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}hvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}nvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}mvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ovariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}fvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}dvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}fvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}cvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ovariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}rvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}yvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ivariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}nvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}svariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}nvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}cvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}"variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}
+variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}}variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}
+variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}
+variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}vvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}rvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ivariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}bvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}lvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}"variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}lvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ivariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}nvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}kvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}dvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}_variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}svariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}rvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}vvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ivariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}cvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}_variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}nvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}mvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}"variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}{variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}
+variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}yvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}pvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}=variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}svariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}rvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ivariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}nvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}gvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}
+variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}dvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}svariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}cvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}rvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ivariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}pvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ivariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ovariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}nvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}=variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}"variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}Tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}hvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}nvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}mvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ovariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}fvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}lvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ivariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}nvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}kvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}dvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}svariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}rvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}vvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ivariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}cvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ivariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}nvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}dvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}fvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+} variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}ivariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}nvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}svariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}tvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}avariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}nvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}cvariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}evariable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}"variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}
+variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
+}}variable "key_vault_name" {
+  description = "Specifies the name of the Key Vault"
+  type = string
+}
+
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the Key Vault"
+  type = string
+}
+
+variable "location" {
+  description = "Specifies the supported Azure location where the resource should be created."
+  type = string
+}
+
+variable "sku_name" {
+  description = "The Name of the SKU used for this Key Vault"
+  type = string
+  default = "standard"
 }
