@@ -1,64 +1,22014 @@
-provider "azurerm" {
-  features {}
+module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
 }
 
-data "azurerm_client_config" "this" {
+data "azurerm_client_config" "current" {}pmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
 }
 
-module "resource-group" {
-  source              = "./modules/resource-group"
-
-  resource_group_name = var.resource_group_name
-  location            = var.location
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
 }
 
-module "storage-account" {
-  source                = "./modules/storage-account"
-
-  resource_group_name    = module.resource-group.name
-  location               = module.resource-group.location
-  storage_account_name   = var.storage_account_name
-  storage_container_name = var.storage_container_name
-  bacpac_file_name       = var.bacpac_file_name
-  bacpac_path            = var.bacpac_path
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
 }
 
-module "sql-server" {
-  source                              = "./modules/sql-server"
-
-  resource_group_name                 = module.resource-group.name
-  location                            = module.resource-group.location
-  server_name                         = var.server_name
-  server_administrator_login          = var.server_administrator_login
-  server_administrator_login_password = var.server_administrator_login_password
-  aad_login_username                  = var.aad_login_username
-  object_id                           = data.azurerm_client_config.this.object_id
+data "azurerm_client_config" "current" {}vmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
 }
 
-
-module "sql-database" {
-  source                              = "./modules/sql-database"
-
-  server_id                           = module.sql-server.id
-  database_name                       = var.database_name
-  storage_account_name                = var.storage_account_name
-  storage_container_name              = var.storage_container_name
-  blob_filename                       = var.bacpac_file_name
-  storage_account_primary_key         = module.storage-account.primary_key
-  server_administrator_login          = var.server_administrator_login
-  server_administrator_login_password = var.server_administrator_login_password
+data "azurerm_client_config" "current" {}imodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
 }
 
-module "data-factory" {
-  source = "./modules/data-factory"
-
-  data_factory_name    = var.data_factory_name
-  linked_service_name  = var.linked_service_name
-  storage_account_name = var.storage_account_name
-  resource_group_name  = var.resource_group_name
-  location             = var.location
-
-  depends_on = [
-    module.storage-account
-  ]
+data "azurerm_client_config" "current" {}dmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
 }
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}"module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}zmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}umodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}mmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}"module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}{module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}
+module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}fmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}tmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}umodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}smodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}{module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}}module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}
+module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}}module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}
+module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}
+module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}dmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}tmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}"module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}zmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}umodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}mmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}_module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}cmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}lmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}imodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}nmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}tmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}_module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}cmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}nmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}fmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}imodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}gmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}"module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}"module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}tmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}hmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}imodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}smodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}"module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}{module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}
+module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}}module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}
+module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}
+module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}mmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}dmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}umodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}lmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}"module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}smodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}umodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}cmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}-module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}gmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}umodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}pmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}"module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}{module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}
+module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}smodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}umodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}cmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}=module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}"module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}.module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}/module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}mmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}dmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}umodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}lmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}smodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}/module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}smodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}umodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}cmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}-module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}gmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}umodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}pmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}"module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}
+module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}
+module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}smodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}umodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}cmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}_module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}gmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}umodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}pmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}_module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}nmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}mmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}=module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}vmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}.module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}smodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}umodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}cmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}_module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}gmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}umodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}pmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}_module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}nmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}mmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}
+module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}lmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}cmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}tmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}imodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}nmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}=module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}vmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}.module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}lmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}cmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}tmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}imodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}nmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}
+module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}}module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}
+module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}
+module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}mmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}dmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}umodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}lmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}"module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}smodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}tmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}gmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}-module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}cmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}cmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}umodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}nmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}tmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}"module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}{module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}
+module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}smodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}umodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}cmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}=module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}"module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}.module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}/module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}mmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}dmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}umodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}lmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}smodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}/module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}smodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}tmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}gmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}-module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}cmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}cmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}umodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}nmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}tmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}"module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}
+module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}
+module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}smodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}umodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}cmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}_module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}gmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}umodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}pmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}_module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}nmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}mmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}=module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}mmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}dmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}umodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}lmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}.module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}smodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}umodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}cmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}-module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}gmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}umodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}pmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}.module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}nmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}mmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}
+module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}lmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}cmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}tmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}imodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}nmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}=module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}mmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}dmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}umodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}lmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}.module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}smodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}umodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}cmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}-module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}gmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}umodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}pmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}.module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}lmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}cmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}tmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}imodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}nmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}
+module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}smodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}tmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}gmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}_module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}cmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}cmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}umodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}nmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}tmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}_module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}nmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}mmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}=module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}vmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}.module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}smodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}tmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}gmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}_module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}cmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}cmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}umodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}nmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}tmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}_module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}nmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}mmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}
+module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}smodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}tmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}gmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}_module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}cmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}nmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}tmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}imodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}nmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}_module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}nmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}mmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}=module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}vmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}.module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}smodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}tmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}gmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}_module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}cmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}nmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}tmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}imodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}nmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}_module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}nmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}mmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}
+module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}bmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}cmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}pmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}cmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}_module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}fmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}imodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}lmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}_module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}nmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}mmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}=module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}vmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}.module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}bmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}cmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}pmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}cmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}_module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}fmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}imodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}lmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}_module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}nmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}mmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}
+module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}bmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}cmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}pmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}cmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}_module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}pmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}tmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}hmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}=module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}vmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}.module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}bmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}cmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}pmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}cmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}_module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}pmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}tmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}hmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}
+module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}}module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}
+module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}
+module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}mmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}dmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}umodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}lmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}"module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}smodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}qmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}lmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}-module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}smodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}vmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}"module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}{module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}
+module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}smodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}umodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}cmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}=module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}"module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}.module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}/module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}mmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}dmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}umodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}lmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}smodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}/module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}smodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}qmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}lmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}-module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}smodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}vmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}"module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}
+module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}
+module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}smodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}umodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}cmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}_module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}gmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}umodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}pmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}_module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}nmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}mmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}=module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}mmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}dmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}umodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}lmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}.module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}smodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}umodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}cmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}-module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}gmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}umodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}pmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}.module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}nmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}mmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}
+module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}lmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}cmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}tmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}imodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}nmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}=module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}mmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}dmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}umodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}lmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}.module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}smodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}umodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}cmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}-module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}gmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}umodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}pmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}.module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}lmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}cmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}tmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}imodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}nmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}
+module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}smodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}vmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}_module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}nmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}mmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}=module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}vmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}.module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}smodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}vmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}_module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}nmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}mmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}
+module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}smodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}vmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}_module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}dmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}mmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}imodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}nmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}imodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}smodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}tmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}tmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}_module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}lmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}gmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}imodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}nmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}=module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}vmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}.module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}smodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}vmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}_module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}dmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}mmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}imodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}nmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}imodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}smodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}tmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}tmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}_module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}lmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}gmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}imodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}nmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}
+module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}smodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}vmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}_module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}dmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}mmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}imodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}nmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}imodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}smodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}tmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}tmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}_module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}lmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}gmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}imodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}nmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}_module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}pmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}smodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}smodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}wmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}dmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}=module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}vmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}.module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}smodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}vmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}_module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}dmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}mmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}imodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}nmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}imodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}smodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}tmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}tmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}_module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}lmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}gmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}imodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}nmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}_module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}pmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}smodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}smodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}wmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}dmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}
+module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}dmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}_module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}lmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}gmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}imodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}nmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}_module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}umodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}smodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}nmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}mmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}=module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}vmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}.module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}dmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}_module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}lmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}gmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}imodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}nmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}_module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}umodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}smodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}nmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}mmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}
+module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}bmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}jmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}cmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}tmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}_module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}imodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}dmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}=module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}dmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}tmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}.module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}zmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}umodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}mmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}_module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}cmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}lmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}imodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}nmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}tmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}_module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}cmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}nmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}fmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}imodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}gmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}.module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}tmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}hmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}imodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}smodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}.module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}bmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}jmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}cmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}tmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}_module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}imodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}dmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}
+module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}}module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}
+module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}
+module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}
+module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}mmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}dmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}umodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}lmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}"module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}smodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}qmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}lmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}-module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}dmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}tmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}bmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}smodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}"module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}{module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}
+module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}smodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}umodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}cmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}=module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}"module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}.module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}/module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}mmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}dmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}umodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}lmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}smodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}/module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}smodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}qmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}lmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}-module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}dmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}tmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}bmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}smodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}"module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}
+module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}
+module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}smodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}vmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}_module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}imodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}dmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}=module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}mmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}dmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}umodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}lmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}.module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}smodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}qmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}lmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}-module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}smodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}vmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}.module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}imodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}dmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}
+module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}dmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}tmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}bmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}smodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}_module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}nmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}mmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}=module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}vmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}.module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}dmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}tmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}bmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}smodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}_module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}nmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}mmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}
+module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}smodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}tmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}gmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}_module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}cmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}cmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}umodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}nmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}tmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}_module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}nmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}mmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}=module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}vmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}.module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}smodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}tmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}gmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}_module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}cmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}cmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}umodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}nmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}tmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}_module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}nmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}mmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}
+module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}smodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}tmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}gmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}_module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}cmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}nmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}tmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}imodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}nmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}_module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}nmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}mmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}=module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}vmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}.module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}smodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}tmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}gmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}_module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}cmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}nmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}tmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}imodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}nmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}_module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}nmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}mmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}
+module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}bmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}lmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}bmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}_module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}fmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}imodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}lmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}nmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}mmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}=module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}vmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}.module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}bmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}cmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}pmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}cmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}_module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}fmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}imodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}lmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}_module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}nmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}mmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}
+module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}smodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}tmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}gmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}_module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}cmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}cmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}umodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}nmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}tmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}_module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}pmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}imodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}mmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}ymodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}_module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}kmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}ymodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}=module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}mmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}dmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}umodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}lmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}.module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}smodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}tmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}gmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}-module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}cmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}cmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}umodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}nmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}tmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}.module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}pmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}imodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}mmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}ymodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}_module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}kmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}ymodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}
+module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}smodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}vmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}_module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}dmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}mmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}imodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}nmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}imodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}smodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}tmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}tmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}_module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}lmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}gmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}imodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}nmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}=module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}vmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}.module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}smodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}vmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}_module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}dmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}mmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}imodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}nmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}imodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}smodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}tmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}tmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}_module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}lmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}gmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}imodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}nmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}
+module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}smodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}vmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}_module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}dmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}mmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}imodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}nmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}imodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}smodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}tmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}tmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}_module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}lmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}gmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}imodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}nmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}_module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}pmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}smodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}smodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}wmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}dmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}=module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}vmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}.module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}smodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}vmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}_module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}dmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}mmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}imodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}nmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}imodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}smodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}tmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}tmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}_module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}lmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}gmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}imodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}nmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}_module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}pmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}smodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}smodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}wmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}dmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}
+module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}}module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}
+module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}
+module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}mmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}dmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}umodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}lmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}"module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}dmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}tmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}-module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}fmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}cmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}tmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}ymodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}"module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}{module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}
+module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}smodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}umodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}cmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}=module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}"module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}.module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}/module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}mmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}dmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}umodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}lmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}smodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}/module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}dmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}tmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}-module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}fmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}cmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}tmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}ymodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}"module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}
+module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}
+module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}dmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}tmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}_module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}fmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}cmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}tmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}ymodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}_module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}nmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}mmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}=module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}vmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}.module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}dmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}tmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}_module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}fmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}cmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}tmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}ymodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}_module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}nmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}mmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}
+module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}lmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}imodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}nmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}kmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}dmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}_module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}smodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}vmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}imodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}cmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}_module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}nmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}mmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}=module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}vmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}.module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}lmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}imodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}nmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}kmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}dmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}_module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}smodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}vmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}imodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}cmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}_module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}nmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}mmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}
+module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}smodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}tmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}gmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}_module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}cmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}cmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}umodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}nmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}tmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}_module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}nmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}mmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}=module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}vmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}.module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}smodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}tmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}gmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}_module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}cmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}cmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}umodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}nmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}tmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}_module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}nmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}mmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}
+module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}smodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}umodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}cmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}_module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}gmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}umodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}pmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}_module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}nmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}mmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}=module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}vmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}.module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}smodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}umodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}cmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}_module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}gmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}umodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}pmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}_module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}nmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}mmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}
+module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}lmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}cmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}tmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}imodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}nmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}=module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}vmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}.module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}lmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}cmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}tmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}imodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}nmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}
+module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}
+module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}dmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}pmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}nmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}dmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}smodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}_module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}nmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}=module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}[module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}
+module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}mmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}dmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}umodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}lmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}.module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}smodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}tmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}rmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}gmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}emodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}-module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}amodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}cmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}cmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}omodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}umodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}nmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}tmodule "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}
+module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {} module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}]module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}
+module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}}module "key-vault" {
+  source = "./modules/key-vault"
+  
+  key_vault_name        = var.key_vault_name
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  tenant_id             = data.azurerm_client_config.current.tenant_id
+  sku_name              = var.sku_name
+}
+
+data "azurerm_client_config" "current" {}
