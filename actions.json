@@ -1,0 +1,44 @@
+{"actions": [
+    {
+    "file": "modules/data-factory/main.tf",
+    "action_type": "Delete File",
+    "action": "Delete data-factory module main.tf file",
+    "description": "1. Open the project directory\n2. Navigate to the /modules/data-factory/ directory\n3. Delete the main.tf file"
+    },
+    {
+    "file": "modules/data-factory/variables.tf",
+    "action_type": "Delete File",
+    "action": "Delete data-factory module variables.tf file",
+    "description": "1. Open the project directory\n2. Navigate to the /modules/data-factory/ directory\n3. Delete the variables.tf file"
+    },
+    {
+    "file": "modules/resource-group/main.tf",
+    "action_type": "Update File",
+    "action": "Update resource-group module main.tf file",
+    "description": "1. Open the project directory\n2. Navigate to the /modules/resource-group/ directory\n3. Open the main.tf file\n4. Remove the reference to the data-factory module"
+    },
+    {
+    "file": "modules/resource-group/variables.tf",
+    "action_type": "Update File",
+    "action": "Update resource-group module variables.tf file",
+    "description": "1. Open the project directory\n2. Navigate to the /modules/resource-group/ directory\n3. Open the variables.tf file\n4. Remove the variable declarations related to the data-factory module"
+    },
+    {
+    "file": "modules/resource-group/outputs.tf",
+    "action_type": "Update File",
+    "action": "Update resource-group module outputs.tf file",
+    "description": "1. Open the project directory\n2. Navigate to the /modules/resource-group/ directory\n3. Open the outputs.tf file\n4. Remove the output declarations related to the data-factory module"
+    },
+    {
+    "file": "modules/sql-server/outputs.tf",
+    "action_type": "Update File",
+    "action": "Update sql-server module outputs.tf file",
+    "description": "1. Open the project directory\n2. Navigate to the /modules/sql-server/ directory\n3. Open the outputs.tf file\n4. Remove the output declarations related to the data-factory module"
+    },
+    {
+    "file": "modules/storage-account/outputs.tf",
+    "action_type": "Update File",
+    "action": "Update storage-account module outputs.tf file",
+    "description": "1. Open the project directory\n2. Navigate to the /modules/storage-account/ directory\n3. Open the outputs.tf file\n4. Remove the output declarations related to the data-factory module"
+    }
+]}
