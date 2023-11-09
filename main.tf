@@ -1,64 +1,13234 @@
-provider "azurerm" {
-  features {}
-}
+module "key-vault" {
+  source = "./modules/key-vault"
 
-data "azurerm_client_config" "this" {
-}
-
-module "resource-group" {
-  source              = "./modules/resource-group"
-
-  resource_group_name = var.resource_group_name
-  location            = var.location
-}
-
-module "storage-account" {
-  source                = "./modules/storage-account"
-
-  resource_group_name    = module.resource-group.name
-  location               = module.resource-group.location
-  storage_account_name   = var.storage_account_name
-  storage_container_name = var.storage_container_name
-  bacpac_file_name       = var.bacpac_file_name
-  bacpac_path            = var.bacpac_path
-}
-
-module "sql-server" {
-  source                              = "./modules/sql-server"
-
-  resource_group_name                 = module.resource-group.name
-  location                            = module.resource-group.location
-  server_name                         = var.server_name
-  server_administrator_login          = var.server_administrator_login
-  server_administrator_login_password = var.server_administrator_login_password
-  aad_login_username                  = var.aad_login_username
-  object_id                           = data.azurerm_client_config.this.object_id
-}
-
-
-module "sql-database" {
-  source                              = "./modules/sql-database"
-
-  server_id                           = module.sql-server.id
-  database_name                       = var.database_name
-  storage_account_name                = var.storage_account_name
-  storage_container_name              = var.storage_container_name
-  blob_filename                       = var.bacpac_file_name
-  storage_account_primary_key         = module.storage-account.primary_key
-  server_administrator_login          = var.server_administrator_login
-  server_administrator_login_password = var.server_administrator_login_password
-}
-
-module "data-factory" {
-  source = "./modules/data-factory"
-
-  data_factory_name    = var.data_factory_name
-  linked_service_name  = var.linked_service_name
-  storage_account_name = var.storage_account_name
+  key_vault_name       = var.key_vault_name
   resource_group_name  = var.resource_group_name
   location             = var.location
+}pmodule "key-vault" {
+  source = "./modules/key-vault"
 
-  depends_on = [
-    module.storage-account
-  ]
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}vmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}"module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}zmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}"module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}{module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}fmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}{module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}}module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}}module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}"module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}zmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}fmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}gmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}"module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}"module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}hmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}"module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}{module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}}module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}"module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}-module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}gmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}pmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}"module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}{module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}=module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}"module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}.module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}/module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}/module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}-module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}gmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}pmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}"module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}gmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}pmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}=module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}vmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}.module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}gmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}pmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}=module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}vmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}.module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}}module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}"module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}gmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}-module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}"module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}{module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}=module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}"module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}.module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}/module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}/module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}gmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}-module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}"module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}gmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}pmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}=module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}.module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}-module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}gmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}pmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}.module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}=module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}.module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}-module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}gmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}pmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}.module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}gmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}=module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}vmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}.module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}gmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}gmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}=module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}vmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}.module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}gmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}bmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}pmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}fmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}=module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}vmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}.module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}bmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}pmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}fmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}bmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}pmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}pmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}hmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}=module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}vmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}.module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}bmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}pmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}pmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}hmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}}module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}"module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}qmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}-module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}vmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}"module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}{module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}=module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}"module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}.module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}/module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}/module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}qmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}-module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}vmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}"module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}gmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}pmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}=module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}.module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}-module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}gmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}pmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}.module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}=module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}.module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}-module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}gmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}pmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}.module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}vmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}=module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}vmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}.module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}vmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}vmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}gmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}=module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}vmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}.module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}vmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}gmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}vmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}gmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}pmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}wmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}=module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}vmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}.module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}vmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}gmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}pmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}wmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}gmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}=module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}vmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}.module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}gmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}bmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}jmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}=module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}.module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}zmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}fmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}gmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}.module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}hmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}.module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}bmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}jmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}}module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}"module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}qmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}-module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}bmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}"module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}{module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}=module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}"module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}.module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}/module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}/module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}qmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}-module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}bmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}"module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}vmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}=module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}.module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}qmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}-module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}vmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}.module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}bmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}=module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}vmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}.module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}bmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}gmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}=module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}vmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}.module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}gmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}gmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}=module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}vmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}.module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}gmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}bmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}bmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}fmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}=module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}vmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}.module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}bmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}pmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}fmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}gmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}pmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}ymodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}kmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}ymodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}=module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}.module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}gmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}-module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}.module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}pmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}ymodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}kmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}ymodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}vmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}gmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}=module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}vmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}.module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}vmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}gmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}vmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}gmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}pmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}wmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}=module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}vmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}.module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}vmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}gmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}pmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}wmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}}module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}"module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}-module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}fmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}ymodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}"module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}{module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}=module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}"module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}.module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}/module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}/module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}-module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}fmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}ymodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}"module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}fmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}ymodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}=module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}vmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}.module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}fmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}ymodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}kmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}vmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}=module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}vmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}.module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}kmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}vmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}gmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}=module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}vmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}.module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}gmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}gmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}pmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}=module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}vmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}.module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}gmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}pmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}=module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}vmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}.module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}pmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}=module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}[module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}.module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}gmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}-module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}]module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
+}}module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = var.resource_group_name
+  location             = var.location
 }
