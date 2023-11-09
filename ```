@@ -1,0 +1,18 @@
+odules/sql-database/main.tf
+
+// main.tf
+
+provider "azurerm" {
+  features {}
+}
+
+resource "azurerm_mssql_database" "example" {
+  name           = "example-sql-database"
+  server_id      = azurerm_sql_server.example.id
+  collation      = "SQL_Latin1_General_CP1_CI_AS"
+  license_type   = "BasePrice"
+  read_scale     = false
+  sku_name       = "GP_Gen5_2"
+  zone_redundant = false
+}
+```
