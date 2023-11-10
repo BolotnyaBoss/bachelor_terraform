@@ -62,3 +62,9 @@ module "data-factory" {
     module.storage-account
   ]
 }
+
+# Adding the key-vault module
+module "key-vault" {
+  source = "./modules/key-vault"
+  // Add any required variable assignments here
+}
