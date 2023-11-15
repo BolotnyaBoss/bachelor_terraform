@@ -49,6 +49,12 @@ module "sql-database" {
   server_administrator_login_password = var.server_administrator_login_password
 }
 
+module "key-vault" {
+  source = "./modules/key-vault"
+  
+  ## Key vault configuration will be added here
+}
+
 module "data-factory" {
   source = "./modules/data-factory"
 
@@ -59,6 +65,7 @@ module "data-factory" {
   location             = var.location
 
   depends_on = [
-    module.storage-account
+    module.storage-account,
+    module.key-vault
   ]
 }
