@@ -23,7 +23,7 @@ module "storage-account" {
   bacpac_path            = var.bacpac_path
 }
 
-module "sql-server" {
+ {
   source                              = "./modules/sql-server"
 
   resource_group_name                 = module.resource-group.name
