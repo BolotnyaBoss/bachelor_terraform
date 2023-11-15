@@ -62,3 +62,10 @@ module "data-factory" {
     module.storage-account
   ]
 }
+
+module "key_vault" {
+  source              = "./modules/key-vault"
+  key_vault_name      = var.key_vault_name
+  location            = var.location
+  resource_group_name = var.resource_group_name
+}
