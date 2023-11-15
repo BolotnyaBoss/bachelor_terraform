@@ -1,0 +1,1 @@
+## File contents for outputs.tf will be provided later
