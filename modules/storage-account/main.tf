@@ -3,7 +3,7 @@ resource "azurerm_storage_account" "sa" {
   resource_group_name      = var.resource_group_name
   location                 = var.location
   account_tier             = "Standard"
-  account_replication_type = "LRS"
+  account_replication_type = "ZRS"
 }
 
 resource "azurerm_storage_container" "ct" {
