@@ -49,16 +49,16 @@ module "sql-database" {
   server_administrator_login_password = var.server_administrator_login_password
 }
 
-module "data-factory" {
-  source = "./modules/data-factory"
-
-  data_factory_name    = var.data_factory_name
-  linked_service_name  = var.linked_service_name
-  storage_account_name = var.storage_account_name
-  resource_group_name  = var.resource_group_name
-  location             = var.location
-
-  depends_on = [
-    module.storage-account
-  ]
-}
+# module "data-factory" {
+#   source = "./modules/data-factory"
+#
+#   data_factory_name    = var.data_factory_name
+#   linked_service_name  = var.linked_service_name
+#   storage_account_name = var.storage_account_name
+#   resource_group_name  = var.resource_group_name
+#   location             = var.location
+#
+#   depends_on = [
+#     module.storage-account
+#   ]
+# }
