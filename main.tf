@@ -23,17 +23,7 @@ module "storage-account" {
   bacpac_path            = var.bacpac_path
 }
 
-module "sql-server" {
-  source                              = "./modules/sql-server"
 
-  resource_group_name                 = module.resource-group.name
-  location                            = module.resource-group.location
-  server_name                         = var.server_name
-  server_administrator_login          = var.server_administrator_login
-  server_administrator_login_password = var.server_administrator_login_password
-  aad_login_username                  = var.aad_login_username
-  object_id                           = data.azurerm_client_config.this.object_id
-}
 
 
 module "sql-database" {
