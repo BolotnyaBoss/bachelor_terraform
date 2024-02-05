@@ -35,7 +35,6 @@ module "sql-server" {
   object_id                           = data.azurerm_client_config.this.object_id
 }
 
-
 module "sql-database" {
   source                              = "./modules/sql-database"
 
@@ -61,4 +60,13 @@ module "data-factory" {
   depends_on = [
     module.storage-account
   ]
+}
+
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name       = var.key_vault_name
+  resource_group_name  = module.resource-group.name
+  location             = module.resource-group.location
+  sku_name             = var.sku_name
 }
