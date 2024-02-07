@@ -53,12 +53,3 @@ variable "aad_login_username" {
     description = "The name login username of AAD administrator"
 }
 
-variable "data_factory_name" {
-    type        = string
-    description = "The name of data factory instance"
-}
-
-variable "linked_service_name" {
-    type        = string
-    description = "The name of linked service in adf instance"
-}
