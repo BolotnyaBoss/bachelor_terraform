@@ -91,7 +91,13 @@ For a list of common issues and solutions, visit [link to FAQ or Troubleshooting
 
 ## Contributing Guidelines
 
-How to contribute to the project.
+We welcome contributions from the community. Here are some ways you can contribute:
+
+- Reporting bugs or issues in the issue tracker.
+- Suggesting enhancements or new features.
+- Submitting pull requests with bug fixes or new features.
+
+Before contributing, please review our contribution guidelines at [link to contribution guidelines]. This will provide information on the process for submitting bug reports, feature requests, and pull requests.
 
 ## Testing and Deployment
 
