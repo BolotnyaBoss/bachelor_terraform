@@ -110,7 +110,9 @@ Please refer to [link to detailed testing and deployment guide] for more instruc
 
 ## License Information
 
-Project's license and copyright information.
+This project is licensed under the [License Name] License. For more information, please refer to the LICENSE file in the repository.
+
+Copyright (c) [Year] [Project Maintainer's Name]
 
 ## Contact Information
 
