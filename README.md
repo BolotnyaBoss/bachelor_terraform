@@ -6,7 +6,13 @@ This project aims to [add project description here, including its purpose, goals
 
 ## Installation Instructions
 
-How to install and set up the project.
+To install and set up the project, follow these steps:
+
+1. Ensure you have all necessary dependencies installed. These include [list of dependencies].
+2. Clone the project repository to your local machine using `git clone [repository-url]`.
+3. Navigate to the project directory and install project-specific libraries and tools using `[installation-command]`.
+
+Please refer to [link to detailed installation guide] for more detailed instructions.
 
 ## Usage Guide
 
