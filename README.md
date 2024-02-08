@@ -47,7 +47,14 @@ For a full list of features, please refer to [link to documentation or wiki].
 
 ## File Structure
 
-The organization of the project's files and directories.
+The project is organized as follows:
+
+- `/modules/`: Contains modular components used throughout the project.
+- `/scripts/`: Includes scripts for deployment, testing, and other automation tasks.
+- `main.tf`: The main Terraform configuration file.
+- `variables.tf`: Defines variables used within the Terraform configuration.
+
+Each file and directory is designed with a specific purpose in mind, ensuring a clean and maintainable code structure.
 
 ## Configuration
 
