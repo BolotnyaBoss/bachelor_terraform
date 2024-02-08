@@ -116,4 +116,9 @@ Copyright (c) [Year] [Project Maintainer's Name]
 
 ## Contact Information
 
-Contact details for the project maintainer or support team.
+For any questions or feedback regarding the project, please reach out to:
+
+- Project Maintainer: [Maintainer's Name]
+- Support Team: [Support Team's Email]
+
+We encourage you to contact us with any queries or suggestions to improve the project.
