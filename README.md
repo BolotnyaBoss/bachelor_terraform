@@ -58,7 +58,26 @@ Each file and directory is designed with a specific purpose in mind, ensuring a 
 
 ## Configuration
 
-Configuration options or settings for the project.
+The project can be configured in the following ways:
+
+- `variable.tf`: Define all the necessary variables for the project setup.
+- Environment variables: Set up various environment variables for different stages of deployment.
+
+For detailed information on each configuration option, refer to the following examples:
+
+```hcl
+variable "resource_group_name" {
+  description = "The name of the resource group in which to create the server"
+  type        = string
+}
+
+variable "location" {
+  description = "The location to create resources"
+  type        = string
+}
+```
+
+Adjust the configuration settings according to your environment and requirements.
 
 ## Troubleshooting
 
