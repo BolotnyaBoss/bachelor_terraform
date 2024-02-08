@@ -2,6 +2,8 @@
 
 A brief description of what this project does and who it's for
 
+This project aims to [add project description here, including its purpose, goals, and any relevant background information].
+
 ## Installation Instructions
 
 How to install and set up the project.
