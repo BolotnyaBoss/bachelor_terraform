@@ -101,7 +101,12 @@ Before contributing, please review our contribution guidelines at [link to contr
 
 ## Testing and Deployment
 
-How to run tests and deploy the project.
+Testing and deployment processes for the project are as follows:
+
+- To run tests, use the command `test-command` from the root of the project directory.
+- Deployment can be performed using the script `deploy-script.sh`, which is located in the `/scripts/` directory.
+
+Please refer to [link to detailed testing and deployment guide] for more instructions and best practices.
 
 ## License Information
 
