@@ -81,7 +81,13 @@ Adjust the configuration settings according to your environment and requirements
 
 ## Troubleshooting
 
-Common issues or errors users might encounter and how to resolve them.
+If you encounter any issues or errors, consider the following troubleshooting steps:
+
+- Ensure all dependencies are installed and up-to-date.
+- Check the configuration settings for any potential errors.
+- Review the error logs for specific messages that can guide the resolution process.
+
+For a list of common issues and solutions, visit [link to FAQ or Troubleshooting guide].
 
 ## Contributing Guidelines
 
