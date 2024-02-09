@@ -1,64 +1,30794 @@
-provider "azurerm" {
-  features {}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
 }
 
-data "azurerm_client_config" "this" {
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}pmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
 }
 
-module "resource-group" {
-  source              = "./modules/resource-group"
+module "databricks" {
+  source = "./modules/databricks"
 
-  resource_group_name = var.resource_group_name
-  location            = var.location
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
 }
 
-module "storage-account" {
-  source                = "./modules/storage-account"
+module "databricks" {
+  source = "./modules/databricks"
 
-  resource_group_name    = module.resource-group.name
-  location               = module.resource-group.location
-  storage_account_name   = var.storage_account_name
-  storage_container_name = var.storage_container_name
-  bacpac_file_name       = var.bacpac_file_name
-  bacpac_path            = var.bacpac_path
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
 }
 
-module "sql-server" {
-  source                              = "./modules/sql-server"
+module "databricks" {
+  source = "./modules/databricks"
 
-  resource_group_name                 = module.resource-group.name
-  location                            = module.resource-group.location
-  server_name                         = var.server_name
-  server_administrator_login          = var.server_administrator_login
-  server_administrator_login_password = var.server_administrator_login_password
-  aad_login_username                  = var.aad_login_username
-  object_id                           = data.azurerm_client_config.this.object_id
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}vmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
 }
 
+module "databricks" {
+  source = "./modules/databricks"
 
-module "sql-database" {
-  source                              = "./modules/sql-database"
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}imodule "key-vault" {
+  source = "./modules/key-vault"
 
-  server_id                           = module.sql-server.id
-  database_name                       = var.database_name
-  storage_account_name                = var.storage_account_name
-  storage_container_name              = var.storage_container_name
-  blob_filename                       = var.bacpac_file_name
-  storage_account_primary_key         = module.storage-account.primary_key
-  server_administrator_login          = var.server_administrator_login
-  server_administrator_login_password = var.server_administrator_login_password
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
 }
 
-module "data-factory" {
-  source = "./modules/data-factory"
+module "databricks" {
+  source = "./modules/databricks"
 
-  data_factory_name    = var.data_factory_name
-  linked_service_name  = var.linked_service_name
-  storage_account_name = var.storage_account_name
-  resource_group_name  = var.resource_group_name
-  location             = var.location
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
 
-  depends_on = [
-    module.storage-account
-  ]
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}"module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}zmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}"module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}{module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}fmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}{module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}}module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}}module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}"module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}zmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}fmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}gmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}"module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}"module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}hmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}"module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}{module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}}module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}"module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}-module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}gmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}pmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}"module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}{module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}=module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}"module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}.module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}/module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}/module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}-module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}gmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}pmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}"module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}gmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}pmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}=module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}vmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}.module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}gmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}pmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}=module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}vmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}.module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}}module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}"module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}gmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}-module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}"module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}{module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}=module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}"module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}.module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}/module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}/module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}gmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}-module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}"module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}gmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}pmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}=module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}.module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}-module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}gmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}pmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}.module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}=module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}.module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}-module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}gmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}pmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}.module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}gmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}=module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}vmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}.module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}gmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}gmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}=module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}vmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}.module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}gmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}bmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}pmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}fmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}=module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}vmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}.module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}bmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}pmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}fmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}bmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}pmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}pmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}hmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}=module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}vmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}.module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}bmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}pmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}pmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}hmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}}module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}"module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}qmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}-module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}vmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}"module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}{module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}=module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}"module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}.module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}/module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}/module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}qmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}-module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}vmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}"module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}gmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}pmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}=module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}.module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}-module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}gmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}pmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}.module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}=module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}.module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}-module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}gmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}pmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}.module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}vmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}=module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}vmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}.module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}vmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}vmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}gmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}=module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}vmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}.module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}vmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}gmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}vmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}gmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}pmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}wmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}=module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}vmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}.module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}vmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}gmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}pmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}wmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}gmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}=module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}vmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}.module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}gmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}bmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}jmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}=module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}.module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}zmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}fmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}gmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}.module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}hmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}.module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}bmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}jmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}}module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}"module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}qmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}-module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}bmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}"module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}{module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}=module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}"module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}.module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}/module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}/module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}qmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}-module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}bmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}"module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}vmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}=module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}.module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}qmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}-module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}vmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}.module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}bmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}=module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}vmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}.module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}bmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}gmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}=module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}vmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}.module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}gmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}gmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}=module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}vmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}.module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}gmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}bmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}bmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}fmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}=module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}vmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}.module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}bmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}pmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}fmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}gmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}pmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}ymodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}kmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}ymodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}=module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}.module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}gmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}-module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}.module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}pmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}ymodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}kmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}ymodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}vmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}gmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}=module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}vmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}.module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}vmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}gmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}vmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}gmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}pmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}wmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}=module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}vmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}.module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}vmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}gmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}pmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}wmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}}module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}"module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}-module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}fmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}ymodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}"module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}{module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}=module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}"module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}.module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}/module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}/module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}-module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}fmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}ymodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}"module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}fmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}ymodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}=module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}vmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}.module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}fmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}ymodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}kmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}vmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}=module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}vmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}.module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}kmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}vmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}gmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}=module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}vmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}.module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}gmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}gmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}pmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}=module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}vmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}.module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}gmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}pmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}=module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}vmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}.module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}imodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}pmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}_module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}=module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}[module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}mmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}dmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}lmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}.module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}smodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}rmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}gmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}emodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}-module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}amodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}cmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}omodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}umodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}nmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}tmodule "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+} module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}]module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}
+module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
+}}module "key-vault" {
+  source = "./modules/key-vault"
+
+  key_vault_name     = "your-key-vault-name"
+  resource_group_name = "your-resource-group-name"
+  location            = "your-location"
+}
+
+module "databricks" {
+  source = "./modules/databricks"
+
+  databricks_workspace_name = "your-databricks-workspace-name"
+  resource_group_name       = "your-resource-group-name"
+  location                  = "your-location"
 }
