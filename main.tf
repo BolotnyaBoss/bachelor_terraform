@@ -49,6 +49,22 @@ module "sql-database" {
   server_administrator_login_password = var.server_administrator_login_password
 }
 
+module "key-vault" {
+  source              = "./modules/key-vault"
+  key_vault_name      = "example-vault"
+  resource_group_name = module.resource-group.name
+  location            = module.resource-group.location
+  sku_name            = "standard"
+}
+
+module "databricks" {
+  source                  = "./modules/databricks"
+  databricks_workspace_name = "example-workspace"
+  resource_group_name     = module.resource-group.name
+  location                = module.resource-group.location
+  sku                     = "standard"
+}
+
 module "data-factory" {
   source = "./modules/data-factory"
 
