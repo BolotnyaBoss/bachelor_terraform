@@ -1,0 +1,3 @@
+EPMDEDPDX-466 - Add update cbb step to pipeline, In Progress, Major
+EPMDEDPDX-465 - Enable Deletion of Onboarded Applications from UI Portal, Closed, Major
+EPMDEDPDX-464 - Enable Deletion of Onboarded for Assessment Applications via API, Closed, Major
