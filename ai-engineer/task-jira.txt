@@ -1,0 +1,39 @@
+EPMESPROAD-5949
+[AIST][OPS] Setup separate llamacpp and dial environments
+Set up environments according to high level description on [https://kb.epam.com/display/EPMGDBY/%5BAIST%5D+Deployment]
+
+AC:
+ # Have separate environments with AIST instances configured for DIAL and for llamacpp;
+ # Environments available by scheduling or by request;
+ # llamacpp available by scheduling or by request via direct http call;
+ # Availability described in KB.
+
+EPMRPP-89778
+[UI] UI-kit. Reflect the latest components changes in the ui-kit
+After the last ui-kit update, some components (e.g. buttons, checkboxes) have been updated in the UI core. Since ui-kit is still not integrated in the application, we need to reflect the changes from the core in the ui-kit components.
+
+The following changes need to be included (please also refer to the relevant Jira tickets):
+
+[https://github.com/reportportal/service-ui/pull/3611]
+[https://github.com/reportportal/service-ui/pull/3621]
+[https://github.com/reportportal/service-ui/pull/3624]
+[https://github.com/reportportal/service-ui/pull/3649]
+[https://github.com/reportportal/service-ui/pull/3691]
+[https://github.com/reportportal/service-ui/pull/3743]
+
+EPMCTDM-6742
+[ML][Folio]: ValueError: Values in the unique key 'users_barcode_ukey' are not unique
+Data: users.csv (Folio)
+
+error:
+{code:none}
+ValueError: Values in the unique key 'users_barcode_ukey' are not unique. Please check the original data.
+{code}
+
+stack trace
+{code:none}
+ERROR    | ml.strategies.strategies:run:163 - Training of the table - users-table-version10 failed on running stage.
+The details of the error - Values in the unique key 'users_barcode_ukey' are not unique. Please check the original data.
+The traceback of the error - Traceback (most recent call last):
+...
+{code}
