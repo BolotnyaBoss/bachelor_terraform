@@ -13,6 +13,7 @@ module "resource-group" {
 
   resource_group_name = var.resource_group_name    # Name of the Resource Group
   location            = var.location               # Azure region where the Resource Group will be created
+  # The Resource Group module creates an Azure Resource Group in a specified location with a given name.
 }
 
 # Module for creating an Azure Storage Account
@@ -25,6 +26,7 @@ module "storage-account" {
   storage_container_name = var.storage_container_name     # Name of the Storage Container
   bacpac_file_name       = var.bacpac_file_name           # Name of the BACPAC file for SQL import
   bacpac_path            = var.bacpac_path                # Path where the BACPAC file is located
+  # The Storage Account module creates an Azure Storage Account and a container in the specified Resource Group and location.
 }
 
 # Module for creating an Azure SQL Server
@@ -38,6 +40,7 @@ module "sql-server" {
   server_administrator_login_password = var.server_administrator_login_password  # Password for the admin login
   aad_login_username                  = var.aad_login_username          # Azure Active Directory admin username
   object_id                           = data.azurerm_client_config.this.object_id  # Azure Active Directory object ID
+  # The SQL Server module creates an Azure SQL Server in the specified Resource Group and location, with the provided admin credentials and AAD settings.
 }
 
 # Module for creating an Azure SQL Database
@@ -52,6 +55,7 @@ module "sql-database" {
   storage_account_primary_key         = module.storage-account.primary_key     # Primary key for the Storage Account
   server_administrator_login          = var.server_administrator_login         # Admin login for the SQL Server
   server_administrator_login_password = var.server_administrator_login_password  # Password for the admin login
+  # The SQL Database module creates an Azure SQL Database on the specified SQL Server, using the provided BACPAC file for import.
 }
 
 # Module for creating an Azure Data Factory
@@ -68,4 +72,5 @@ module "data-factory" {
   depends_on = [
     module.storage-account
   ]
+  # The Data Factory module creates an Azure Data Factory in the specified Resource Group and location, linking it with the specified Storage Account.
 }
